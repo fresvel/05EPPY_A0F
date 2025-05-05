@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block main %}
+<header>
+    <h1>¡Gracias por tu compra!</h1>
+</header>
+<main>
+    <section>
+        <h2>Dirección de envío</h2>
+        <p>{{ shipping_address }}</p>
+    </section>
+    <section>
+        <h2>Resumen de compra</h2>
+        <p><strong>Total:</strong> {{ total_price }} {{ currency }}</p>
+    </section>
+    <section>
+        <a href="/">Volver a la tienda</a>
+    </section>
+</main>
+{% endblock %}
