@@ -22,7 +22,7 @@
                 <td>{{ item.price }}</td>
                 <td>{{ item.total_price }}</td>
                 <td>
-                    <form method="post" action="{{ url_for('remove_item') }}">
+                    <form method="post" action="{{ url_for('view_store.remove_item') }}">
                         <input type="hidden" name="item" value="{{ item.id }}">
                         <button type="submit">Eliminar</button>
                     </form>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 
-    <form method="post" action="{{ url_for('bought') }}">
+    <form method="post" action="{{ url_for('view_final.bought') }}">
     <div class="basket-summary mt-4">
         <div class="shipping-address mt-4">
             <h2>Dirección de Envío</h2>

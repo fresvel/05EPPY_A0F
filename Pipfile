@@ -12,8 +12,9 @@ tomli = "==2.2.1"
 zipp = "==3.21.0"
 flask = "*"
 selenium = "*"
-web-store = {file = ".", editable = true}
 flask-wtf = "*"
+dotenv = "*"
+web-store = {file = ".", editable = true}
 
 [dev-packages]
 
