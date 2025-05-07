@@ -1,10 +1,7 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask, render_template, session, request
-from flask import redirect, url_for
+from flask import Flask
 
-from web_store.testing import TestWebStore
-from flask_wtf.csrf import CSRFProtect
 from web_store.view.store import view_store
 from web_store.view.basket import view_basket
 from web_store.view.login import view_login
@@ -23,14 +20,8 @@ app.register_blueprint(view_store, url_prefix="/store")
 app.register_blueprint(view_basket, url_prefix="/basket")
 app.register_blueprint(view_final, url_prefix="/final")
 
-#csrf = CSRFProtect(app) en html {{ csrf_token() }}
-
-
-
-
 def main():
     print("Initiating Web Store")
-    print(TestWebStore.test)
     app.run(host='0.0.0.0', port=PORT, debug=True)
 
 if __name__ == "__main__":

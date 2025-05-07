@@ -12,13 +12,13 @@ def login():
     else: 
         if "usuario" in session:
             return redirect(url_for('view_login.home'))
-        return render_template('login.html')
+        return render_template('login.html', title='Login')
     
 @view_login.route('/')
 def index():
     if "usuario" in session:
         return home()
-    return render_template('login.html')
+    return render_template('login.html', title='Login')
 
     
 
@@ -26,4 +26,4 @@ def index():
 def home():
     if "usuario" in session:
         return render_template('home.html')
-    return render_template('login.html')
+    return render_template('login.html', title='Login')

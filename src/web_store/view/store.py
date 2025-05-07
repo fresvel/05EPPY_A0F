@@ -1,5 +1,5 @@
 from flask import Blueprint
-from flask import session, render_template, request
+from flask import session, render_template, request, jsonify
 from flask import redirect, url_for
 
 view_store=Blueprint("view_store", __name__)
@@ -15,6 +15,7 @@ def store():
 def add_item():
     print("Modificando carrito")
     if "usuario" in session:
+        print(request)
         item = request.form.get("item")
         quantity = request.form.get("quantity", 1)
         if item:
@@ -22,7 +23,7 @@ def add_item():
             basket[item] = basket.get(item, 0) + int(quantity)
             session["basket"] = basket
             print(session["basket"])
-        return redirect(url_for('view_store.store'))
+        return jsonify(session["basket"])
     return render_template('login.html')
 
 @view_store.route("/remove_item", methods=["POST"])

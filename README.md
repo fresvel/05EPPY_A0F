@@ -38,3 +38,19 @@ web_store
 
 Esta es una página web se prueba, no existe una base de datos en el backend. Para acceder
 se puede usar cualquier usuario y contraseña.
+
+## Testing
+
+Una vez compilado e instalado, para realizar el testing en una terminal ejecutar:
+
+```bash
+web_store
+```
+
+Luego abrir una terminal diferente y ejecutar
+
+```bash
+web_store_test
+```
+
+Para ello se deberá ingresar la ruta absoluta del driver.
