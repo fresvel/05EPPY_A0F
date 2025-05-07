@@ -13,7 +13,7 @@
 ```bash
 pip install setuptools wheel build
 git clone https://github.com/fresvel/05EPPY_A01
-cd 05EPPY_A01
+cd 05EPPY_A0F
 make build
 make install
 web_store
