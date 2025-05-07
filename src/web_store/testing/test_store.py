@@ -76,6 +76,6 @@ class TestStore(BrowserDriver):
             )
         self.assertEqual(label_total.text, "Total: 67505")
 
-
+    
 
 
