@@ -1,21 +1,12 @@
-import unittest
+import time
+from .browser_driver import BrowserDriver
 
-class TestBasket(unittest.TestCase):
+class TestBasket(BrowserDriver):
     
-
-    @classmethod
-    def setUpClass(cls):
-        pass
-    
-    @classmethod
-    def tearDownClass(cls):
-        pass
-
-    def setUp(self):
-        return super().setUp()
-    
-    def tearDown(self):
-        return super().tearDown()
+    def test_basket_page(self):
+        session={"altavoz":11,"headset":51,"laptop":21,"mouse":31,"televisor":41}
+        time.sleep(100)
+        
     
 
 

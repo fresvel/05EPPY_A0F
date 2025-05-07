@@ -1,4 +1,7 @@
 import unittest
 
 class TestFinal(unittest.TestCase):
-    pass
+    
+
+    def test_final_page(self):
+        pass

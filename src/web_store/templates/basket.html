@@ -45,7 +45,7 @@
                     <textarea cols="50" id="shipping_address" name="address" class="form-control" required></textarea>
                 </div>
         </div>
-        <p>Total: {{ basket_total }}</p>
+        <p id="label_total">Total: {{ basket_total }}</p>
         <input type="hidden" name="total" value="{{ basket_total }}">
         <button type="submit" class="btn btn-primary">Finalizar</button>
     </div>

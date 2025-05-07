@@ -64,12 +64,18 @@ class TestStore(BrowserDriver):
         self._driver_.execute_script("arguments[0].click();", send_button)
 
         element = self._driver_.find_element(By.ID, "cartData")
-        time.sleep(3)
+        time.sleep(2)
         res = element.get_attribute("textContent").strip()
         self.assertEqual('{"altavoz":11,"headset":51,"laptop":21,"mouse":31,"televisor":41}', res)
 
+    def test_basket_function(self):
+        basket_button=self._driver_.find_element(By.ID, "nav_basket")
+        self._driver_.execute_script("arguments[0].click();", basket_button)
+        label_total=WebDriverWait(self._driver_, 10).until(
+            EC.visibility_of_element_located((By.ID, "label_total"))
+            )
+        self.assertEqual(label_total.text, "Total: 67505")
 
-        
 
 
 
